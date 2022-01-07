@@ -14,8 +14,8 @@
                   <th>Product</th>
                   <th>Name</th>
                   <th>Quantity/Update</th>
+				  <th><input type="checkbox" id="selectAll">Select All</th>
 				  <th>Price</th>
-				  <th>Buy</th>
 				</tr>
               </thead>
               <tbody>
@@ -35,7 +35,7 @@
 				  </td>
 
 				  <td>
-					  <input type="checkbox" name="select_product[]" cart-id="{{$cart->id}}"></td>
+					  <input type="checkbox" id="check" name="select_product[]" cart-id="{{$cart->id}}"></td>
 				  </td>
 				  <td>${{ $cart->product->price }}</td>
                   
@@ -50,7 +50,7 @@
 				 
 				 <tr>
                   <td colspan="3" style="text-align:right"></td>
-				  <td >pay with eway <input type="checkbox" name="eway" style="margin-left: 12"></td>
+				  <td >pay with jazzcash <input type="checkbox" name="eway" style="margin-left: 12"></td>
 				  <td class="label label-important buy_product" style="display:block;cursor:pointer;"> <strong>Buy</strong></td>
                 </tr>
 				</tbody>
@@ -64,6 +64,10 @@
 @endsection
 @push('footer-script')
 <script>
+	$("#selectAll").click(function(){
+        $("input[type=checkbox]").prop('checked', $(this).prop('checked'));
+
+});
 
   $('.buy_product').on('click',function(){
 	  

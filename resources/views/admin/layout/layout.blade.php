@@ -9,6 +9,12 @@
 	<link rel="icon" href="{{ asset('admin_theme/images/favicon.ico')}}" type="image/ico" />
 
     <title>ecomerce </title>
+   <!-- Latest compiled JavaScript -->
+	<script src="{{ asset('https://code.jquery.com/jquery-3.6.0.slim.min.js')}}" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')}}"></script>
+
+<!-- jQuery library -->
+<script src="{{ asset('https://code.jquery.com/jquery-3.6.0.min.js')}}" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Bootstrap -->
     <link href="{{ asset('admin_theme/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -95,6 +101,6 @@
 
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('admin_theme/build/js/custom.min.js') }}"></script>
-
+    @stack('footer-script')
   </body>
 </html>

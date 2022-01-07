@@ -9,17 +9,6 @@ use Illuminate\Support\Facades\Auth;
 class CartController extends Controller
 {
     
-    public function index()
-    {
-        //
-    }
-
-    public function create()
-    {
-        //
-    }
-
-   
     public function store(Request $request)
     {
         $data= array(
@@ -29,23 +18,6 @@ class CartController extends Controller
         );
         Cart::create($data);
         return redirect()->route('cart');
-    }
-
-    
-    public function show(Cart $cart)
-    {
-        //
-    }
-
-    public function edit(Cart $cart)
-    {
-        //
-    }
-
-   
-    public function update(Request $request, Cart $cart)
-    {
-        //
     }
 
     public function destroy(Cart $cart, Request $request)

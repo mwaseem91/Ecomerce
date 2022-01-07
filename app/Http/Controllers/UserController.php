@@ -13,7 +13,6 @@ class UserController extends Controller
         $user = User::get();
         return view('admin.user.index',compact('user'));
     }
-
     
     public function delete(Request $request){
         $id= $request->id;

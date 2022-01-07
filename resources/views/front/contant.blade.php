@@ -8,12 +8,12 @@
         <div class="row">
             <div class="span4">
             <h4>Contact Details</h4>
-            <p>	18 Fresno,<br/> CA 93727, USA
+            <p>	Ecomerce,<br/> CA 93727, 
                 <br/><br/>
-                info@bootsshop.com<br/>
-                ﻿Tel 123-456-6780<br/>
-                Fax 123-456-5679<br/>
-                web:bootsshop.com
+               muhammad99wasim@gmail.com<br/>
+                ﻿phone 0344 1427077<br/>
+               
+                web:ecomerceshop.com
             </p>		
             </div>
                 
@@ -46,7 +46,7 @@
               
               </div>
               <div class="control-group">
-                  <textarea rows="3" id="textarea" class="input-xlarge"></textarea>
+                  <textarea rows="3"  placeholder="write message here" id="textarea" class="input-xlarge"></textarea>
                
               </div>
     

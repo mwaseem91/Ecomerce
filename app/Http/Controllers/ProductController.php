@@ -16,16 +16,11 @@ class ProductController extends Controller
         $products = Product::get();
         return view('admin/product/index',compact('products'));
     }
-
-    
-    
     public function create()
     {
         $categories=Category::whereNotNull('category_id')->get();
         return view('admin/product/add',compact('categories'));
     }
-
-    
     public function store(Request $request)
     {
        $data= array(
@@ -49,8 +44,6 @@ class ProductController extends Controller
     {
         return "show";
     }
-
-    
     public function edit(Product $product)
     {
         $id =$product->id;
@@ -58,8 +51,6 @@ class ProductController extends Controller
         $categories= Category::whereNotNull('category_id')->get();
         return view('admin/product/edit',compact('product','categories'));
     }
-
-    
     public function update(Request $request, Product $product)
     {
         $id=  $product->id;
@@ -79,12 +70,12 @@ class ProductController extends Controller
         return redirect()->route('products.index');
     }
 
-   
     public function destroy(Product $product)
     {
         $product->delete();
         return redirect()->route('products.index');
     }
+    
     // public function extraDetailsStore(Request $request)
     // {
     //     $id=  $request->id;

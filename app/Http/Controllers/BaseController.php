@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Product;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -80,12 +81,18 @@ class BaseController extends Controller
      $usertype= Auth::user()->utype;
      if( $usertype == 'admin')
         {
-            return view('admin.dashboard');
+            $category=Category::count();
+            $products = Product::count();
+            $total_user=User::count();
+            return view('admin.dashboard', compact('total_user', 'products','category'));
         }
         else{
+            
             $products = Product::get();
             $new_products = Product::limit(6)->latest()->get();
             return view('front.home',compact('products','new_products'));
         }
     }
+
+    
 }

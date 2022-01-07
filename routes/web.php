@@ -21,9 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 Route::get('/',[BaseController::class, 'home'])->name('home');
 Route::get('redirect',[BaseController::class, 'redirect'])->name('redirect');
 Route::get('/contant',[BaseController::class, 'contant'])->name('contant');
@@ -58,7 +56,11 @@ Route::group(['middleware' => 'auth'],function(){
  Route::post('/category/add',[CategoryController::class, 'store'])->name('category.store');
  Route::get('/category/edit/{id}',[CategoryController::class, 'edit'])->name('category.edit');
  Route::post('/category/update/{id}',[CategoryController::class, 'update'])->name('category.update');
- Route::get('/category/delete/{id}',[CategoryController::class, 'destroy'])->name('category.delete');
+ Route::get('/category-delete/{id}',[CategoryController::class, 'destroy'])->name('category.delete');
+//  Route::get('/category-delete/{id}',[CategoryController::class, 'delete'])->name('users.destroy');
+ Route::delete('selected/delete',[CategoryController::class, 'selectedDelete'])->name('deleteSelect');
+
+//  Route::delete('myproductsDeleteAll',[CategoryController::class,'deleteAll']);
 
 
 //Product controller route

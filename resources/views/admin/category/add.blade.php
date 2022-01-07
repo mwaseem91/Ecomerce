@@ -33,10 +33,10 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Sub category of <span class="required">*</span>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Sub category of <span class="">*</span>
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <select name="category_id" required="required" class="form-control col-md-7 col-xs-12">
+                <select name="category_id"  class="form-control col-md-7 col-xs-12">
                     <option value="">No Subcategory</option>
                     @foreach ($categories as $category)
                          <option value="{{ $category->id }}">{{$category->name}}</option>
